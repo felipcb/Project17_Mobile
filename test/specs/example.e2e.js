@@ -1,13 +1,14 @@
 const homeScreen = require("../screens/home.screen");
 const loginScreen = require("../screens/login.screen");
 const mystoreScreen = require("../screens/mystore.screen");
+var assert = require('assert');
 
 let usuario='gerente'
 let senha='GD*peToHNJ1#c$sgk08EaYJQ'
 let urlLoja='http://lojaebac.ebaconline.art.br/'
 
 describe('Access Admin Panel', () => {
-    it('shoul login with valid credentials', async () => {
+    it('shoud login with valid credentials', async () => {
         await homeScreen.gotoStarted()
         await homeScreen.gotoStarted2()
         await homeScreen.gotoLogin()
@@ -19,7 +20,6 @@ describe('Access Admin Panel', () => {
         await mystoreScreen.inicioMyStore()
 
         expect(await mystoreScreen.getStoreName()).toEqual('EBAC - Shop')
-    });
-    
+        
+    });    
 });
-
