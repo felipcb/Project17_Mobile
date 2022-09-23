@@ -19,6 +19,10 @@ class LoginScreen {
         return $('id:bottom_button')
     }
 
+    get #storeCredentials() {
+        return $('id=com.woocommerce.android:id/login_site_creds')
+    }
+
     get #userName() {        
         return $('android=new UiSelector().text("Username")')
     }

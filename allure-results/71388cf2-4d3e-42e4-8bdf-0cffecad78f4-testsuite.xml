@@ -1,0 +1,34 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1663974366801' stop='1663974373961'>
+    <name>Access Admin Panel</name>
+    <title>Access Admin Panel</title>
+    <test-cases>
+        <test-case start='1663974366802' status='broken' stop='1663974373960'>
+            <name>shoud login with valid credentials</name>
+            <title>shoud login with valid credentials</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='device' value='samsung galaxy s8-7.0'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>element ("id=com.woocommerce.android:id/button_login_store") still not displayed after 5000ms</message>
+                <stack-trace>Error: element ("id=com.woocommerce.android:id/button_login_store") still not displayed after 5000ms
+                    at C:\Users\Felipe\Documents\repositorio\whoo commerce\node_modules\webdriverio\build\commands\browser\waitUntil.js:66:23
+                    at async Element.wrapCommandFn (C:\Users\Felipe\Documents\repositorio\whoo commerce\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\Felipe\Documents\repositorio\whoo commerce\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (C:\Users\Felipe\Documents\repositorio\whoo commerce\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (C:\Users\Felipe\Documents\repositorio\whoo commerce\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (C:\Users\Felipe\Documents\repositorio\whoo commerce\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (C:\Users\Felipe\Documents\repositorio\whoo commerce\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async HomeScreen.gotoLogin (C:\Users\Felipe\Documents\repositorio\whoo commerce\test\screens\home.screen.js:25:9)
+                    at async Context.&lt;anonymous> (C:\Users\Felipe\Documents\repositorio\whoo commerce\test\specs\example.e2e.js:14:9)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

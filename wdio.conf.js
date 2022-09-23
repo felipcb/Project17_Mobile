@@ -22,7 +22,7 @@ exports.config = {
         'device': "Samsung Galaxy S8",
         'os_version': "7.0",
         'app': 'bs://0f033c8a4f0e5c79f30ce8375243b1d30154ec57',
-        'browserstack.local': true
+        'browserstack.local': false
         // "platformName": "Android",
         // "appium:platformVersion": "9.0",
         // "appium:deviceName": "ebac-woo",
@@ -54,11 +54,11 @@ exports.config = {
             outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: true,
-        }],
-        [video, {   
-            saveAllVideos: true,       // If true, also saves videos for successful test cases
-            videoSlowdownMultiplier: 50, // Higher to get slower videos, lower for faster videos [Value 1-100]
-        }]  
+        }]
+        // [video, {   
+        //     saveAllVideos: true,       // If true, also saves videos for successful test cases
+        //     videoSlowdownMultiplier: 50, // Higher to get slower videos, lower for faster videos [Value 1-100]
+        // }]  
     ],
 
     onComplete: function() {
