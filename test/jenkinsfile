@@ -1,11 +1,6 @@
 pipeline{
     agent any
-    
-    environment {
-         SECRET_ID = credentials("browserstack-id")
-         SECRET_KEY = credentials("browserstack-key")
-    }
-    
+
     stages{
         stage('Clonar repositório'){
             steps{
@@ -15,7 +10,7 @@ pipeline{
         
         stage('Instalar dependências') {
             steps {
-               powershell 'npm install' 
+               powershell 'npm install -y' 
             }
         }
 
