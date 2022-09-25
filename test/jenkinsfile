@@ -1,0 +1,28 @@
+pipeline{
+    agent any
+    
+    environment {
+         SECRET_ID = credentials("browserstack-id")
+         SECRET_KEY = credentials("browserstack-key")
+    }
+    
+    stages{
+        stage('Clonar repositório'){
+            steps{
+                git branch: 'master', url: 'https://github.com/felipcb/Project17_Mobile.git'
+            }
+        }
+        
+        stage('Instalar dependências') {
+            steps {
+               powershell 'npm install' 
+            }
+        }
+
+        stage('Iniciar testes') {
+            steps {
+                powershell 'npm run wdio'
+            }
+        }
+    }
+}

@@ -13,8 +13,7 @@ describe('Access Admin Panel', () => {
         await homeScreen.gotoStarted2()
         await homeScreen.gotoLogin()
         await loginScreen.setStoreAddress(urlLoja)        
-        await loginScreen.continue()
-       
+        await loginScreen.continue()       
         await loginScreen.login(usuario, senha)
         // await loginScreen.goToTwoFactorAuth()
         // await loginScreen.twoFactorLogin(senha)
