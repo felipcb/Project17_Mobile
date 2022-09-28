@@ -14,12 +14,13 @@ describe('Access Admin Panel', () => {
         await homeScreen.gotoLogin()
         await loginScreen.setStoreAddress(urlLoja)        
         await loginScreen.continue()       
+        // await loginScreen.withStoreCredentials()
         await loginScreen.login(usuario, senha)
-        // await loginScreen.goToTwoFactorAuth()
-        // await loginScreen.twoFactorLogin(senha)
-        // await mystoreScreen.inicioMyStore()
+        await loginScreen.goToTwoFactorAuth()
+        await loginScreen.twoFactorLogin(senha)
+        await mystoreScreen.inicioMyStore()
 
-        // expect(await mystoreScreen.getStoreName()).toEqual('EBAC - Shop')
+        expect(await mystoreScreen.getStoreName()).toEqual('EBAC - Shop')
         
     });    
 });

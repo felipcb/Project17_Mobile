@@ -22,6 +22,10 @@ class LoginScreen {
     get #storeCredentials() {
         return $('id=com.woocommerce.android:id/login_site_creds')
     }
+    async withStoreCredentials() {
+        await this.#storeCredentials.click()
+    }
+
 
     get #userName() {        
         return $('android=new UiSelector().text("Username")')
